@@ -12,29 +12,22 @@ body {
 .card {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: baseline;
+  flex-wrap: nowrap;
   align-items: center;
   width: 450px;
   height: 697px;
   background: white;
   border-radius: 20px;
+  text-align: center;
+  /* justify-content: space-between; */
 }
 .image-header {
-  display: flex;
   width: 450px;
   height: 220px;
   border-radius: 20px 20px 0 0;
 }
-.container {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  align-items: center;
-  /* flex-wrap: nowrap; */
-  justify-content: center;
-}
-.container h1 {
+
+.card h1 {
   text-align: center;
   width: 354px;
   height: 37px;
@@ -78,22 +71,24 @@ body {
 }
 .price {
   display: flex;
-  /* flex-direction: column; */
-  flex-wrap: wrap;
-  justify-content: flex-start;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-around;
   align-content: flex-start;
-  /* margin-right: 60px; */
   width: 92px;
+  height: 48px;
   font-size: 16px;
   line-height: 21.17px;
 }
 .price p:nth-child(1) {
   color: #1f2e55;
   font-weight: 900;
+  height: 21px;
 }
 .price p:nth-child(2) {
   color: #717fa6;
   font-weight: 500;
+  height: 21px;
 }
 div.info-price .change {
   color: #382ae1;
@@ -104,7 +99,7 @@ div.info-price .change {
   line-height: 18.52px;
   text-decoration: underline;
 }
-.info-price .change:active {
+.info-price .change:hover {
   color: #766cf1;
 }
 
@@ -120,11 +115,11 @@ div.info-price .change {
   background-color: #382ae1;
   box-shadow: 0px 20px 20px rgba(56, 42, 225, 0.190291);
 }
-.payment:active {
+.payment:hover {
   background-color: #717fa6;
-  cursor: pointer;
+  /* cursor: pointer; */
 }
-.payment p {
+.payment a {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -134,8 +129,9 @@ div.info-price .change {
   font-size: 15px;
   font-weight: 900;
   line-height: 19.85px;
+  text-decoration: none;
 }
-.container a.cancel {
+.card a.cancel {
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -150,7 +146,55 @@ div.info-price .change {
   line-height: 20px;
   margin-top: 28px;
 }
-.container:active :nth-child(5) {
+.card a.cancel:hover {
   /* cursor: pointer; */
   color: #1f2e55;
+}
+@media screen and (max-width: 375px) {
+  body {
+    width: 375px;
+    height: 709px;
+  }
+  .card {
+    width: 327px;
+    height: 567px;
+  }
+  .image-header {
+    width: 327px;
+    height: 160px;
+  }
+  .card h1 {
+    text-align: center;
+    width: 263px;
+    height: 29px;
+    color: #1f2e55;
+    font-family: "Red Hat Display";
+  }
+  .info {
+    height: 75px;
+    width: 263px;
+  }
+  .card-info {
+    width: 279px;
+    height: 81px;
+  }
+  .info-price {
+    width: 247px;
+    height: 48px;
+  }
+  .price {
+    width: 81px;
+    height: 40px;
+    font-size: 14px;
+    line-height: 18.52px;
+  }
+  div.info-price .change {
+    color: #382ae1;
+    width: 48px;
+    height: 17px;
+    font-size: 13px;
+
+    line-height: 17.2px;
+    text-decoration: underline;
+  }
 }

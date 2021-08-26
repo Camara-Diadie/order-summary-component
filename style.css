@@ -19,7 +19,6 @@ body {
   background: white;
   border-radius: 20px;
   text-align: center;
-  /* justify-content: space-between; */
 }
 .image-header {
   width: 450px;
@@ -110,14 +109,13 @@ div.info-price .change {
   align-items: center;
   height: 50px;
   width: 354px;
-  margin-top: 48px;
+  margin-top: 28px;
   border-radius: 11px;
   background-color: #382ae1;
   box-shadow: 0px 20px 20px rgba(56, 42, 225, 0.190291);
 }
 .payment:hover {
   background-color: #717fa6;
-  /* cursor: pointer; */
 }
 .payment a {
   display: flex;
@@ -147,7 +145,6 @@ div.info-price .change {
   margin-top: 28px;
 }
 .card a.cancel:hover {
-  /* cursor: pointer; */
   color: #1f2e55;
 }
 @media screen and (max-width: 375px) {
@@ -173,6 +170,8 @@ div.info-price .change {
   .info {
     height: 75px;
     width: 263px;
+    font-size: 15px;
+    line-height: 25px;
   }
   .card-info {
     width: 279px;
@@ -193,8 +192,15 @@ div.info-price .change {
     width: 48px;
     height: 17px;
     font-size: 13px;
-
     line-height: 17.2px;
     text-decoration: underline;
+  }
+  .payment {
+    width: 279px;
+    height: 50px;
+  }
+  .payment a {
+    font-size: 15px;
+    line-height: 19.85px;
   }
 }
